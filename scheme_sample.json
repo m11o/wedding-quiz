@@ -1,0 +1,74 @@
+[
+  {
+    "name": "sessions",
+    "columns": [
+      {
+        "name": "passcode",
+        "type": "string",
+        "null": false,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "name": "users",
+    "columns": [
+      {
+        "name" : "name",
+        "type": "string",
+        "null" : false
+      },
+      {
+        "name": "answers",
+        "type": "Array",
+        "null" : true,
+        "values": [
+          {
+            "name": "questionId",
+            "type": "number",
+            "null" : false
+          },
+          {
+            "name": "answerId",
+            "type": "number",
+            "null": false
+          },
+          {
+            "name": "correct",
+            "type": "bool",
+            "null": false,
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "questions",
+    "columns": [
+      {
+        "name": "body",
+        "type": "string",
+        "null": false
+      },
+      {
+        "name": "answers",
+        "type": "Array",
+        "null": false,
+        "values": [
+          {
+            "name": "body",
+            "type": "string",
+            "null": false
+          },
+          {
+            "name": "correct",
+            "type": "bool",
+            "null": false,
+            "default": false
+          }
+        ]
+      }
+    ]
+  }
+]
